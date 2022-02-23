@@ -2,13 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Minitest</title>
+    <title>Title</title>
 </head>
 <body>
-
-
-<h1> Bài này em biết cách làm, đó là đi kiểm tra điều kiện a+b>c; a+c>b; b+c>a</h1>
-<h1> Sau đó kiểm tra tiếp điều kiện a*a==b*b+c*c; ...v...v...blah bloh</h1>
-<h1> Mà em còn bận nhiều việc quá nên thôi để sau anh ạ</h1>
+<input type="number" id="src1">
+<input type="number" id="src2">
+<input type="number" id="src3">
+<button onclick="tamgiac()">Kết quả</button>
+<p id="ketqua"></p>
+<script>
+    function tamgiac () {
+        let x = +document.getElementById("src1").value;
+        let y = +document.getElementById("src2").value;
+        let z = +document.getElementById("src3").value;
+        if (((x+y)>z) && ((z+y)>x) && ((x+z)>y)) {
+            if (((x*x)==(y*y)+(z*z)) || ((z*z)==(y*y)+(x*x)) || (y*y)==(x*x)+(z*z))) {
+                document.getElementById("ketqua").innerHTML = "tam giac vuong"
+            } else if ( x==y || y==z || x==z) {
+                document.getElementById("ketqua").innerHTML = "tam giac can"
+            } else if (x==y==z) {
+                document.getElementById("ketqua").innerHTML = "tam giac deu"
+            }
+        } else {
+            document.getElementById("ketqua").innerHTML = "khong phai tam giac"
+        }
+    }
+</script>
 </body>
 </html>
