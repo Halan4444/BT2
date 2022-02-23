@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Minitest</title>
+</head>
+<body>
+<input type="number" id="src1">
+<button onclick="Tinhchuvidientich()">=</button>
+Kết quả: <p id="kq"></p>
+<p id="kq2"></p>
+</body>
+</html>
+<script>
+    // Câu lệnh nhập vào giá trị từ 1 ô input và blah...bloh..hiện ra kết quả ở thẻ p.
+    function Tinhchuvidientich() {
+        //1.  lấy giá trị trong thẻ input người dùng nhập
+        var x = document.getElementById('src1').value;
+
+        x = parseFloat(x); //2. chuyển kiểu dữ liệu về dạng số
+        //3. tính toán
+        var chuvi = x * 4;
+        var dientich = x ** 2;
+        //4. đưa giá trị tổng vào trong thẻ div kq.
+        document.querySelector('#kq').innerHTML = chuvi ;
+        document.getElementById('kq2').innerHTML = dientich ;
+        //5. Gọi hàm tính tổng ở thuộc tính onClick trên nut bấm.
+    }
+
+</script>

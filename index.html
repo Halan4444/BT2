@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Minitest</title>
+</head>
+<body>
+<input type="number" id="src1">
+<input type="number" id="src2">
+<button onclick="Tinhtich()">=</button>
+Kết quả: <h1 id="kq"></h1>
+</body>
+</html>
+<script>
+    // Câu lệnh hiển thị hộp thoại, tên bản thân
+    alert("Long");
+
+    // Câu lệnh nhận 1 giá trị từ hộp thoại, viết code nhận giá trị và bình phương số đó
+
+        var number = 12;
+        alert(number );
+    alert("Bình Phương Của Số Trên Hộp Thoại Là: "+number**2);
+    // Câu lệnh nhập vào giá trị từ 1 ô input và blah...bloh...
+    function Tinhtich() {
+        //1.  lấy giá trị trong thẻ input người dùng nhập
+        var x = document.querySelector('#src1').value;
+        var y = document.getElementById('src2').value;
+
+        x = parseFloat(x); //2. chuyển kiểu dữ liệu về dạng số
+        y = parseFloat(y);
+        //3. tính toán
+        var tich = x * y;
+        //4. đưa giá trị tổng vào trong thẻ div kq.
+        document.querySelector('#kq').innerHTML = tich;
+        //5. Gọi hàm tính tổng ở thuộc tính onClick trên nut bấm.
+    }
+
+</script>
